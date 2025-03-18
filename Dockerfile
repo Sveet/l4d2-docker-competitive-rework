@@ -21,6 +21,7 @@ VOLUME ["/addons", "/cfg"]
 
 ENV DEFAULT_MAP=$DEFAULT_MAP \
     DEFAULT_MODE="coop" \
+    IPADDRESS=0.0.0.0 \
     PORT=0 \
     HOSTNAME="Left4DevOps" \
     REGION=255 \

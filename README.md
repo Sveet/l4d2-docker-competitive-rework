@@ -1,3 +1,5 @@
+This repo merges the [l4d2-docker](https://github.com/Left4DevOps/l4d2-docker) and [L4D2-Competitive-Rework](https://github.com/SirPlease/L4D2-Competitive-Rework) repos.
+
 # Left 4 Dead / Left 4 Dead 2 Dedicated Server Docker Image
 
 > "Oh, MAN! This is just like Counter-Strike!"

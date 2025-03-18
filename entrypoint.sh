@@ -16,7 +16,7 @@ if [ $# -gt 0 ]; then
 else
     STARTUP=("./srcds_run")
     STARTUP+=("+sv_logecho 1")
-    STARTUP+=("+hostname \"${HOSTNAME}\"")
+    STARTUP+=("+hostname \"$HOSTNAME\"")
     STARTUP+=("+sv_region ${REGION}")
 
     STARTUP+=("+motd_enabled ${MOTD}")
@@ -51,6 +51,10 @@ else
         STARTUP+=("+sv_gametypes \"${GAME_TYPES}\"")
     fi
 
+    if [ "${IPADDRESS}" ]; then
+        STARTUP+=("-ip \"$IPADDRESS\"")
+    fi
+
     if [ "${FORK:-0}" -gt 0 ]; then
         STARTUP+=("-fork ${FORK} +exec server##.cfg")
     else
@@ -64,7 +68,7 @@ else
     fi
 
     if [ -n "${RCON_PASSWORD}" ]; then
-        STARTUP+=("+rcon_password \"${RCON_PASSWORD}\"")
+        STARTUP+=("+rcon_password \"$RCON_PASSWORD\"")
     fi
 
     if [ "${NET_CON_PORT:-0}" -gt 0 ]; then
@@ -78,5 +82,6 @@ else
         STARTUP+=("${EXTRA_ARGS}")
     fi
 
+    echo "Entrypoint Command: ${STARTUP[*]}"
     ${STARTUP[*]}
 fi
