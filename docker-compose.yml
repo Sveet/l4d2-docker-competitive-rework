@@ -1,4 +1,20 @@
 services:
   l4d2:
-    image: left4devops/l4d2
+    build: .
+    restart: unless-stopped
     network_mode: host
+    environment:
+      - HOSTNAME=
+      - REGION=0
+      - STEAM_GROUP=
+      - STEAM_GROUP_EXCLUSIVE=
+      - HOST_CONTENT=
+      - MOTD_CONTENT=
+      - IPADDRESS=
+      - PORT=27015
+      - RCON_PASSWORD=
+    volumes:
+      - /path/to/addons:/addons/
+      - /path/to/cfg:/cfg
+      - /path/to/scripts:/scripts
+      
