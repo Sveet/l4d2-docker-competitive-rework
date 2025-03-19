@@ -16,6 +16,7 @@ EXPOSE 27015/tcp 27015/udp
 
 ADD as-user.sh .
 RUN ./as-user.sh
+RUN ./download.sh
 
 VOLUME ["/addons", "/cfg"]
 
