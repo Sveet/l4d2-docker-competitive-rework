@@ -18,5 +18,5 @@ services:
     volumes:
       - ./addons:/addons/
       - ./cfg:/cfg
-      - ./scripts:/home/louis/l4d2/left4dead2/scripts
+      - ./scripts:/home/steam/l4d2/left4dead2/scripts
       

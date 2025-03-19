@@ -8,7 +8,7 @@ microdnf -y install SDL2.i686 \
 microdnf -y update
 microdnf clean all
 
-useradd louis
+useradd steam
 
 mkdir             /addons /cfg /motd /tmp/dumps
-chown louis:louis /addons /cfg /motd /tmp/dumps
+chown steam:steam /addons /cfg /motd /tmp/dumps

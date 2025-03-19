@@ -1,7 +1,14 @@
 #!/bin/bash
+
+# Install game
+echo """force_install_dir "/home/steam/${INSTALL_DIR}"
+login anonymous
+app_update ${GAME_ID}
+quit""" > update.txt
+
 if [ "${INSTALL_DIR}" = "l4d2" ]; then
   # https://github.com/ValveSoftware/steam-for-linux/issues/11522
-  echo """force_install_dir "/home/louis/${INSTALL_DIR}"
+  echo """force_install_dir "/home/steam/${INSTALL_DIR}"
   login anonymous
   @sSteamCmdForcePlatformType windows
   app_update ${GAME_ID}

@@ -1,9 +1,13 @@
 # Notice
 This repo merges the [l4d2-docker](https://github.com/Left4DevOps/l4d2-docker) and [L4D2-Competitive-Rework](https://github.com/SirPlease/L4D2-Competitive-Rework) repos.
 
-The provided folders for `/scripts` and `/cfg` include both Vanilla + Competitive files. No additional merging should be needed.
+The provided folders for `/scripts` and `/cfg` include both Vanilla + Competitive files. No directory merging should be needed.
 
 To run the server, update the `docker-compose.yml` and configure `/cfg/server.cfg` to your liking.
+
+For admin controls, add your steam ID to `/addons/sourcemod/configs/admins_simple.ini`
+
+Original `Left4DevOps/l4d2-docker` docs are below.
 
 # Left 4 Dead / Left 4 Dead 2 Dedicated Server Docker Image
 
