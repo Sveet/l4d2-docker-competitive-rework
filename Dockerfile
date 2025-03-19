@@ -15,6 +15,7 @@ ARG GAME_ID=222860 \
 EXPOSE 27015/tcp 27015/udp
 
 ADD as-user.sh .
+ADD download.sh .
 RUN ./as-user.sh
 RUN ./download.sh
 
