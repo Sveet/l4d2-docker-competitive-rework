@@ -1,5 +1,6 @@
 services:
   l4d2:
+    container_name: l4d2
     build: .
     restart: unless-stopped
     network_mode: host
@@ -10,11 +11,12 @@ services:
       - STEAM_GROUP_EXCLUSIVE=
       - HOST_CONTENT=
       - MOTD_CONTENT=
+      - MOTD=1
       - IPADDRESS=
       - PORT=27015
       - RCON_PASSWORD=
     volumes:
       - ./addons:/addons/
       - ./cfg:/cfg
-      - ./scripts:/scripts
+      - ./scripts:/home/louis/l4d2/left4dead2/scripts
       
