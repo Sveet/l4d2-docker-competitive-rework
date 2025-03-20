@@ -3,9 +3,11 @@ This repo merges the [l4d2-docker](https://github.com/Left4DevOps/l4d2-docker) a
 
 The provided folders for `/scripts` and `/cfg` include both Vanilla + Competitive files. No directory merging should be needed.
 
-To run the server, update the `docker-compose.yml` and configure `/cfg/server.cfg` to your liking.
+Before running the server, update the `docker-compose.yml` and configure `/cfg/server.cfg` to your liking.
 
 For admin controls, add your steam ID to `/addons/sourcemod/configs/admins_simple.ini`
+
+Run the server with `docker compose up -d`. View logs with `docker logs -f l4d2`.
 
 Original `Left4DevOps/l4d2-docker` docs are below.
 
