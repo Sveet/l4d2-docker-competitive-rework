@@ -14,7 +14,6 @@ services:
       - MOTD=1
       - IPADDRESS=
       - PORT=27015
-      - RCON_PASSWORD=
     volumes:
       - ./addons:/addons/
       - ./cfg:/cfg
